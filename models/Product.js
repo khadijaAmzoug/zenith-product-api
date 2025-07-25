@@ -1,30 +1,28 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Product name is required']
+    required: true
   },
   description: {
     type: String,
-    required: [true, 'Product description is required']
+    required: true
   },
   price: {
     type: Number,
-    required: [true, 'Product price is required'],
-    min: [0.01, 'Price must be greater than 0']
+    required: true,
+    min: [0, 'Price must be greater than 0']
   },
   category: {
     type: String,
-    required: [true, 'Product category is required']
+    required: true
   },
   inStock: {
     type: Boolean,
     default: true
   },
-  tags: {
-    type: [String]
-  },
+  tags: [String],
   createdAt: {
     type: Date,
     default: Date.now
@@ -33,4 +31,4 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-module.exports = Product;
+export default Product;

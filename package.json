@@ -18,9 +18,9 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/khadijaAmzoug/zenith-product-api/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/khadijaAmzoug/zenith-product-api#readme",
   "dependencies": {
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
